@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+html,
+body,
+#root {
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 12px;
+  color: #272727;
+  box-sizing: border-box;
+}
+a {
+  color: #409890;
+}
+* {
+  font-size: inherit;
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerRow {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #4db6ac;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 35px;
+  height: 35px;
+}
+
+.logoRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ReactVirtualizedContainer {
+  display: inline-flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0.25rem;
+}
+.LogoColumn {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  text-transform: uppercase;
+}
+.PrimaryLogoText,
+.SecondaryLogoText {
+  text-transform: lowercase;
+  font-size: 2em;
+}
+.PrimaryLogoText {
+  font-weight: bold;
+  color: #272727;
+  margin: 0 0.5em;
+}
+.SecondaryLogoText {
+  color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.NavList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ComponentList,
+.HighOrderComponentList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.7rem;
+}
+.ComponentList {
+  background-color: #272727;
+}
+.HighOrderComponentList {
+  background-color: #111;
+}
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ScrollingBody {
+  /* flex: 1 0 auto;  */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+  flex: 1 1 auto;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.WindowScrollerWrapper {
+  flex: 1 1 auto;
+}
+
+.List {
+  border: 1px solid #e0e0e0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 25px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+.rowScrolling::after {
+  content: ": scrolling";
+  font-size: 0.65rem;
+  color: #aaa;
+}
+
+.placeholder {
+  display: inline-block;
+  height: 1em;
+  background-color: #DDD;
+}
+
+.ContentBox {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  padding: 0 1rem 1rem 1rem;
+  overflow: auto;
+  background: white;
+}
+.ContentBox:first-of-type {
+  padding-top: 1rem;
+}
+
+.Header {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  font-weight: normal;
+  justify-content: space-between;
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.Small {
+  font-size: .65em;
+}
+.Link:hover {
+  text-decoration: none;
+}
+
+.Paragraph {
+  flex: 0 0 auto;
+  line-height: 1.2rem;
+  margin: 0 0 1rem;
 }
